@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace SpiderLanguage.Controllers
 {
     [Authorize(Policy = "RequireEmail")]
-    [Authorize(Roles = "Administrator")]
+    [Authorize(Roles = "Teacher")]
     public class TeacherController : Controller
     {
         private SpiderLanguageContext _context;

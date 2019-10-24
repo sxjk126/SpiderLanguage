@@ -27,7 +27,7 @@ namespace SpiderLanguage.Controllers
         {
             if (this.User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Index", "SpiderLanguage");
+                return RedirectToAction("Index", "Home");
             }
             return View();
         }
@@ -40,7 +40,7 @@ namespace SpiderLanguage.Controllers
                 var result = await _signInManager.PasswordSignInAsync(loginModel.UserName, loginModel.Password, loginModel.RememberMe, false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "SpiderLanguage");
+                    return RedirectToAction("Index", "Home");
                 }
             }
             ModelState.AddModelError("", "Faild to Login");
@@ -50,7 +50,7 @@ namespace SpiderLanguage.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "SpiderLanguage");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Register()
@@ -95,7 +95,7 @@ namespace SpiderLanguage.Controllers
                     var resultSignIn = await _signInManager.PasswordSignInAsync(registerModel.UserName, registerModel.Password, registerModel.RememberMe, false);
                     if (resultSignIn.Succeeded)
                     {
-                        return RedirectToAction("Index", "SpiderLanguage");
+                        return RedirectToAction("Index", "Home");
                     }
                 }
                 foreach (var error in result.Errors)

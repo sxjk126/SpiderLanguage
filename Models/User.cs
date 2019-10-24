@@ -13,5 +13,6 @@ namespace SpiderLanguage.Models
         public int StudentId { get; set; }
 
         public virtual ICollection<Chapter> Chapters { get; set; }
+        
     }
 }

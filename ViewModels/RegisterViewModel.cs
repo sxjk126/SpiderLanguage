@@ -20,10 +20,7 @@ namespace SpiderLanguage.ViewModels
         [Required(ErrorMessage = "Please select a role")]
         public string RoleName { get; set; }
 
-        [Display(Name = "Phone Number")]
-        [Required(ErrorMessage = "Please enter your phone number")]
-        [DataType(DataType.PhoneNumber)]
-        public string PhoneNumber { get; set; }
+
 
         [Required(ErrorMessage = "Please enter your email")]
         [DataType(DataType.EmailAddress)]

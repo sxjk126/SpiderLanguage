@@ -16,7 +16,7 @@ namespace SpiderLanguage.Data
         }
 
         public DbSet<User> SpiderLanguageUsers { get; set; }
-        public DbSet<Chapter> Books { get; set; }
+        public DbSet<Chapter> Chapters { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
